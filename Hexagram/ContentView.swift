@@ -4,27 +4,41 @@
 //
 //  Created by Boran Cui on 2024/11/24.
 //
-//  易经数据采用 https://www.zhouyi.cc/zhouyi/yijing64 中的内容
+//  数据来源：https://www.zhouyi.cc/zhouyi/yijing64
+//  触发 Dynamic Island 函数：triggerDynamicIsland
 
 import SwiftUI
+import Foundation
+import ActivityKit
 
-// 数据模型
+// 数据模型
 struct Hexagram: Identifiable, Codable {
     let id = UUID() // 唯一标识符
     let name: String // 卦名
     let icon: String // 图形
-    let shortintro: String //四字解释，如“刚健中正“
-    let orginalcontent: String //易经原文
-    let vernacular: String //白话文解释
-    let Duanyitianji: String //《断易天机》解
-    let Originalexplain: String //传统解卦
+    let shortintro: String // 四字解释
+    let orginalcontent: String // 易经原文
+    let vernacular: String // 白话文解释
+    let Duanyitianji: String // 《断易天机》解
+    let Originalexplain: String // 传统解卦
+
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case icon
+        case shortintro
+        case orginalcontent
+        case vernacular
+        case Duanyitianji
+        case Originalexplain
+    }
 }
 
-// ContentView
+// 主界面
 struct ContentView: View {
-    // 动态加载的卦数据
     @State private var hexagrams: [Hexagram] = []
-    
+    @State private var selectedHexagramID: UUID?
+    @State private var searchText: String = ""
+
     // 从 JSON 文件加载数据
     func loadHexagrams() {
         if let url = Bundle.main.url(forResource: "HexagramData", withExtension: "json") {
@@ -40,157 +54,116 @@ struct ContentView: View {
         }
     }
 
+    // 根据搜索文本过滤数据
+    var filteredHexagrams: [Hexagram] {
+        if searchText.isEmpty {
+            return hexagrams
+        } else {
+            return hexagrams.filter { $0.name.contains(searchText) }
+        }
+    }
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                // 渐变背景
-                LinearGradient(
-                    gradient: Gradient(colors: [Color("BackgroundStart"), Color("BackgroundEnd")]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-
-                // 卡片式列表
-                ScrollView {
-                    VStack(spacing: 16) {
-                        ForEach(hexagrams) { hexagram in
-                            NavigationLink(destination: HexagramDetailView(hexagram: hexagram)) {
-                                HStack {
-                                    Text(hexagram.icon)
-                                        .font(.largeTitle)
-                                        .frame(width: 50, height: 50)
-                                        .background(
-                                            Circle()
-                                                .fill(Color("IconBackground"))
-                                        )
-                                    VStack(alignment: .leading) {
-                                        Text(hexagram.name)
-                                            .font(.headline)
-                                            .foregroundColor(Color("TextPrimary"))
-                                        Text(hexagram.shortintro)
-                                            .font(.subheadline)
-                                            .foregroundColor(Color("TextSecondary"))
-                                    }
-                                    Spacer()
-                                }
-                                .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color("CardBackground"))
-                                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 4)
-                                )
-                                .padding(.horizontal)
+        NavigationSplitView {
+            List(selection: $selectedHexagramID) {
+                ForEach(filteredHexagrams) { hexagram in
+                    NavigationLink(value: hexagram.id) {
+                        HStack(spacing: 16) {
+                            Text(hexagram.icon)
+                                .font(.largeTitle)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(hexagram.name)
+                                    .font(.headline)
+                                    .foregroundColor(.primary)
+                                Text(hexagram.shortintro)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
                             }
                         }
+                        .padding(.vertical, 8)
                     }
                 }
             }
-            .navigationTitle("六十四卦速查") // 设置标题
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // 确保 hexagrams 数组不为空
+                        guard !hexagrams.isEmpty else {
+                            print("没有可用的卦象数据")
+                            return
+                        }
+                        // 随机选择一个卦象
+                        if let randomHexagram = hexagrams.randomElement() {
+                            // 更新选中的卦象 ID，以便界面同步显示
+                            selectedHexagramID = randomHexagram.id
+                            // 调用 triggerDynamicIsland 函数
+                            triggerDynamicIsland(hexagram: randomHexagram)
+                        } else {
+                            print("随机选择卦象失败")
+                        }
+                    }) {
+                        Image(systemName: "dice")
+                    }
+                }
+            }
+            .navigationTitle("六十四卦速查")
             .onAppear {
-                loadHexagrams() // 视图加载时加载 JSON 数据
+                loadHexagrams()
+            }
+            .searchable(text: $searchText, prompt: "搜索卦名") // 添加搜索功能
+        } detail: {
+            if let selectedHexagramID = selectedHexagramID,
+               let hexagram = hexagrams.first(where: { $0.id == selectedHexagramID }) {
+                HexagramDetailView(hexagram: hexagram)
+            } else {
+                Text("请选择你需要的卦象")
+                    .foregroundColor(.secondary)
+                    .font(.title)
+                    .bold()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
+        .navigationSplitViewStyle(.balanced)
     }
 }
 
-//详情页面
+
+// 详情页面
 struct HexagramDetailView: View {
     let hexagram: Hexagram
 
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                // 渐变背景：覆盖整个页面，包括顶部的导航栏
-                LinearGradient(
-                    gradient: Gradient(colors: [Color("BackgroundStart"), Color("BackgroundEnd")]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea() // 确保渐变背景覆盖屏幕和安全区域
-
-                VStack(spacing: 20) {
-                    // 标题区，包括图标、标题、简介
-                    HStack(alignment: .center, spacing: 16) {
-                        Spacer() // 左侧间距，确保整体居中
-
-                        // 图标
-                        Text(hexagram.icon)
-                            .font(.system(size: geometry.size.width * 0.1)) // 动态字体大小，基于屏幕宽度
-                            .frame(width: geometry.size.width * 0.15, height: geometry.size.width * 0.15)
-                            .background(
-                                Circle()
-                                    .fill(Color("IconBackground"))
-                            )
-
-                        // 标题和简介
-                        VStack(alignment: .center, spacing: 4) {
-                            Text(hexagram.name)
-                                .font(.system(size: geometry.size.width * 0.05)) // 动态调整标题大小
-                                .bold()
-                                .foregroundColor(Color("TextPrimary"))
-                                .multilineTextAlignment(.center) // 居中对齐标题文字
-                            Text(hexagram.shortintro)
-                                .font(.system(size: geometry.size.width * 0.035)) // 动态调整简介大小
-                                .foregroundColor(Color("TextSecondary"))
-                                .multilineTextAlignment(.center) // 居中对齐简介文字
-                        }
-
-                        Spacer() // 右侧间距，确保整体居中
-                    }
-                    .frame(maxWidth: .infinity) // 确保标题区在整个页面中居中
-                    
-                    Divider()
-                        .background(Color("DividerColor"))
-
-                    // 内容区
-                    VStack(alignment: .leading, spacing: 16) {
-                        SectionView(
-                            title: "《易经》原文",
-                            content: hexagram.orginalcontent,
-                            titleFont: .system(size: geometry.size.width * 0.04), // 动态标题字体
-                            contentFont: .system(size: geometry.size.width * 0.035) // 动态内容字体
-                        )
-                        SectionView(
-                            title: "白话文解释",
-                            content: hexagram.vernacular,
-                            titleFont: .system(size: geometry.size.width * 0.04),
-                            contentFont: .system(size: geometry.size.width * 0.035)
-                        )
-                        SectionView(
-                            title: "《断易天机》解",
-                            content: hexagram.Duanyitianji,
-                            titleFont: .system(size: geometry.size.width * 0.04),
-                            contentFont: .system(size: geometry.size.width * 0.035)
-                        )
-                        SectionView(
-                            title: "传统解卦",
-                            content: hexagram.Originalexplain,
-                            titleFont: .system(size: geometry.size.width * 0.04),
-                            contentFont: .system(size: geometry.size.width * 0.035)
-                        )
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                // 标题
+                HStack(alignment: .top, spacing: 16) {
+                    Text(hexagram.icon)
+                        .font(.system(size: 60))
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(hexagram.name)
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.primary)
+                        Text(hexagram.shortintro)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
                     }
                 }
-                .padding(20) // 文字内容的统一间距
-                .background(
-                    RoundedRectangle(cornerRadius: 20) // 增大圆角矩形
-                        .fill(Color("CardBackground"))
-                        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
-                        .padding(.horizontal, 16) // 保证背景左右两侧的留白
-                )
-                .padding(.horizontal) // 整体内容相对屏幕的左右间距
+                Divider() // 分割线
+                // 内容
+                SectionView(title: "《易经》原文", content: hexagram.orginalcontent)
+                SectionView(title: "白话文解释", content: hexagram.vernacular)
+                SectionView(title: "《断易天机》解", content: hexagram.Duanyitianji)
+                SectionView(title: "传统解卦", content: hexagram.Originalexplain)
             }
-            .navigationBarTitleDisplayMode(.inline) // 将标题居中
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text(hexagram.name)
-                        .font(.system(size: geometry.size.width * 0.05)) // 动态调整导航栏标题字体大小
-                        .foregroundColor(Color("TextPrimary"))
-                        .bold()
-                }
-            }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .navigationTitle(hexagram.name)
+        #if os(iOS) || os(watchOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+        
     }
 }
 
@@ -198,22 +171,42 @@ struct HexagramDetailView: View {
 struct SectionView: View {
     let title: String
     let content: String
-    let titleFont: Font // 动态标题字体
-    let contentFont: Font // 动态内容字体
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 12) {
             Text(title)
-                .font(titleFont) // 使用动态标题字体
-                .foregroundColor(Color("TextPrimary"))
+                .font(.headline)
+                .foregroundColor(.primary)
             Text(content)
-                .font(contentFont) // 使用动态内容字体
-                .foregroundColor(Color("TextSecondary"))
+                .font(.body)
+                .foregroundColor(.primary)
         }
+        .padding(.bottom, 16)
     }
 }
 
 // 预览
 #Preview {
     ContentView()
+}
+
+extension ContentView {
+    func triggerDynamicIsland(hexagram: Hexagram) {
+        let attributes = HexagramActivityAttributes(hexagramId: hexagram.id)
+        let initialState = HexagramActivityAttributes.ContentState(
+            icon: hexagram.icon,
+            name: hexagram.name,
+            shortintro: hexagram.shortintro
+        )
+        
+        // 定义活动内容，有效期为30秒
+        let activityContent = ActivityContent(state: initialState, staleDate: Date().addingTimeInterval(30))
+        
+        do {
+            _ = try Activity<HexagramActivityAttributes>.request(attributes: attributes, content: activityContent)
+            print("成功启动 Dynamic Island")
+        } catch {
+            print("启动 Dynamic Island 失败: \(error)")
+        }
+    }
 }

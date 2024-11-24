@@ -4,6 +4,10 @@
 <dict>
 	<key>NSExtension</key>
 	<dict>
+		<key>NSSupportsLiveActivities</key>
+		<true/>
+		<key>NSLiveActivityUsageDescription</key>
+		<string>提供信息</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widgetkit-extension</string>
 	</dict>

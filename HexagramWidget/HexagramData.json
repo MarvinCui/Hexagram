@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "乾卦",
+        "name": "乾为天",
         "icon": "䷀",
         "shortintro": "刚健中正",
         "orginalcontent": "《乾》：元亨利贞。",
@@ -11,12 +11,632 @@
     },
     {
         "id": 2,
-        "name": "坤卦",
-        "icon" : "䷁",
-        "shortintro": "厚德载物",
-        "orginalcontent": "《坤》：元亨利牝马之贞。",
-        "vernacular": "坤卦象征地，地势坤，君子以厚德载物。",
+        "name": "坤为地",
+        "icon": "䷁",
+        "shortintro": "柔顺伸展",
+        "orginalcontent": "《坤》：元亨，利牝马之贞。",
+        "vernacular": "坤卦象征地，柔顺而伸展。",
         "Duanyitianji": "坤为地，纯阴之象。",
-        "Originalexplain": "此卦象征厚德载物，顺势而为。"
-    }
+        "Originalexplain": "此卦象征柔顺伸展，宜于守正。"
+    },
+    {
+        "id": 3,
+        "name": "水雷屯",
+        "icon": "䷂",
+        "shortintro": "起始维艰",
+        "orginalcontent": "《屯》：元亨利贞，勿用有攸往，利建侯。",
+        "vernacular": "屯卦象征万物初生，充满艰难险阻。",
+        "Duanyitianji": "屯卦，水雷相合，初始之象。",
+        "Originalexplain": "此卦象征起始维艰，但终能欣欣向荣。"
+    },
+    {
+        "id": 4,
+        "name": "山水蒙",
+        "icon": "䷃",
+        "shortintro": "启蒙奋发",
+        "orginalcontent": "《蒙》：亨，非我求童蒙，童蒙求我。",
+        "vernacular": "蒙卦象征蒙昧，需要启蒙。",
+        "Duanyitianji": "蒙卦，山下有水，蒙昧之象。",
+        "Originalexplain": "此卦象征启蒙奋发，把握时机。"
+    },
+    {
+        "id": 5,
+        "name": "水天需",
+        "icon": "䷄",
+        "shortintro": "守正待机",
+        "orginalcontent": "《需》：有孚，光亨，贞吉。利涉大川。",
+        "vernacular": "需卦象征等待，守正不移。",
+        "Duanyitianji": "需卦，水在天上，需待之象。",
+        "Originalexplain": "此卦象征守正待机，以待时机。"
+    },
+    {
+        "id": 6,
+        "name": "天水讼",
+        "icon": "䷅",
+        "shortintro": "慎争戒讼",
+        "orginalcontent": "《讼》：有孚，窒惕，中吉，终凶。利见大人，不利涉大川。",
+        "vernacular": "讼卦象征争讼，慎争戒讼。",
+        "Duanyitianji": "讼卦，天水相违，争讼之象。",
+        "Originalexplain": "此卦象征慎争戒讼，以避凶险。"
+    },
+    {
+        "id": 7,
+        "name": "地水师",
+        "icon": "䷆",
+        "shortintro": "行险而顺",
+        "orginalcontent": "《师》：贞，丈人吉，无咎。",
+        "vernacular": "师卦象征军队，行险而顺。",
+        "Duanyitianji": "师卦，地中有水，师众之象。",
+        "Originalexplain": "此卦象征行险而顺，以正则吉。"
+    },
+    {
+        "id": 8,
+        "name": "水地比",
+        "icon": "䷇",
+        "shortintro": "诚信团结",
+        "orginalcontent": "《比》：元亨，利牝马之贞。",
+        "vernacular": "比卦象征亲比，诚信团结。",
+        "Duanyitianji": "比卦，地上有水，亲比之象。",
+        "Originalexplain": "此卦象征诚信团结，以和为贵。"
+    },
+    {
+        "id": 9,
+        "name": "风天小畜",
+        "icon": "䷈",
+        "shortintro": "蓄养待进",
+        "orginalcontent": "《小畜》：亨，密云不雨，自我西郊。",
+        "vernacular": "小畜卦象征小有积蓄，蓄养待进。",
+        "Duanyitianji": "小畜卦，风行天上，小畜之象。",
+        "Originalexplain": "此卦象征蓄养待进，以待天时。"
+    },
+    {
+        "id": 10,
+        "name": "天泽履",
+        "icon": "䷉",
+        "shortintro": "脚踏实地",
+        "orginalcontent": "《履》：履霜，坚冰至。",
+        "vernacular": "履卦象征履行，脚踏实地。",
+        "Duanyitianji": "履卦，天上有泽，履践之象。",
+        "Originalexplain": "此卦象征脚踏实地，以慎为先。"
+    },
+    {
+        "id": 11,
+        "name": "地天泰",
+        "icon": "䷊",
+        "shortintro": "应时而变",
+        "orginalcontent": "《泰》：小往大来，吉亨。",
+        "vernacular": "泰卦象征通泰，应时而变。",
+        "Duanyitianji": "泰卦，地天相合，泰通之象。",
+        "Originalexplain": "此卦象征应时而变，以通为泰。"
+    },
+    {
+        "id": 12,
+        "name": "天地否",
+        "icon": "䷋",
+        "shortintro": "不交不通",
+        "orginalcontent": "《否》：否之匪人，不利君子贞，大往小来。",
+        "vernacular": "否卦象征否塞，不交不通。",
+        "Duanyitianji": "否卦，天地相背，否塞之象。",
+        "Originalexplain": "此卦象征不交不通，以待时变。"
+    },
+    {
+        "id": 13,
+        "name": "天火同人",
+        "icon": "䷌",
+        "shortintro": "上下和同",
+        "orginalcontent": "《同人》：同人于野，亨，利涉大川，利君子贞。",
+        "vernacular": "同人卦象征与人和同，上下一致。",
+        "Duanyitianji": "同人卦，天下有火，同人之象。",
+        "Originalexplain": "此卦象征上下和同，以和为贵。"
+    },
+    {
+        "id": 14,
+        "name": "火天大有",
+        "icon": "䷍",
+        "shortintro": "顺天依时",
+        "orginalcontent": "《大有》：元亨。",
+        "vernacular": "大有卦象征大有所得，顺天依时。",
+        "Duanyitianji": "大有卦，火在天上，大有之象。",
+        "Originalexplain": "此卦象征顺天依时，以获大有。"
+    },
+    {
+        "id": 15,
+        "name": "地山谦",
+        "icon": "䷎",
+        "shortintro": "内高外低",
+        "orginalcontent": "《谦》：亨，君子有终。",
+        "vernacular": "谦卦象征谦虚，内高外低。",
+        "Duanyitianji": "谦卦，地中有山，谦虚之象。",
+        "Originalexplain": "此卦象征内高外低，以谦受益。"
+    },
+    {
+        "id": 16,
+        "name": "雷地豫",
+        "icon": "䷏",
+        "shortintro": "顺时依势",
+        "orginalcontent": "《豫》：利建侯行师。",
+        "vernacular": "豫卦象征愉悦，顺时依势。",
+        "Duanyitianji": "豫卦，雷动地上，豫悦之象。",
+        "Originalexplain": "此卦象征顺时依势，以悦其民。"
+    },
+    {
+        "id": 17,
+        "name": "泽雷随",
+        "icon": "䷐",
+        "shortintro": "随时变通",
+        "orginalcontent": "《随》：元亨利贞，无咎。",
+        "vernacular": "随卦象征随从，随时变通。",
+        "Duanyitianji": "随卦，泽中有雷，随从之象。",
+        "Originalexplain": "此卦象征随时变通，以顺其时。"
+    },
+    {
+        "id": 18,
+        "name": "山风蛊",
+        "icon": "䷑",
+        "shortintro": "振疲起衰",
+        "orginalcontent": "《蛊》：元亨，利涉大川。",
+        "vernacular": "蛊卦象征蛊惑，振疲起衰。",
+        "Duanyitianji": "蛊卦，山下有风，蛊惑之象。",
+        "Originalexplain": "此卦象征振疲起衰，以治其蛊。"
+    },
+    {
+        "id": 19,
+        "name": "地泽临",
+        "icon": "䷒",
+        "shortintro": "教民保民",
+        "orginalcontent": "《临》：元亨利贞，至于八月有凶。",
+        "vernacular": "临卦象征临治，教民保民。",
+        "Duanyitianji": "临卦，地上有泽，临治之象。",
+        "Originalexplain": "此卦象征教民保民，以仁为本。"
+    },
+    {
+        "id": 20,
+        "name": "风地观",
+        "icon": "䷓",
+        "shortintro": "观下瞻上",
+        "orginalcontent": "《观》：盥而不荐，有孚颙若。",
+        "vernacular": "观卦象征观察，观下瞻上。",
+        "Duanyitianji": "观卦，风行地上，观察之象。",
+        "Originalexplain": "此卦象征观下瞻上，以明其道。"
+    },
+    {
+        "id": 21,
+        "name": "火雷噬嗑",
+        "icon": "䷔",
+        "shortintro": "刚柔相济",
+        "orginalcontent": "《噬嗑》：亨，利用狱。",
+        "vernacular": "噬嗑卦象征咀嚼，刚柔相济。",
+        "Duanyitianji": "噬嗑卦，火雷相合，噬嗑之象。",
+        "Originalexplain": "此卦象征刚柔相济，以断狱事。"
+    },
+    {
+        "id": 22,
+        "name": "山火贲",
+        "icon": "䷕",
+        "shortintro": "饰外扬质",
+        "orginalcontent": "《贲》：亨，小利有所往。",
+        "vernacular": "贲卦象征装饰，饰外扬质。",
+        "Duanyitianji": "贲卦，山下有火，贲饰之象。",
+        "Originalexplain": "此卦象征饰外扬质，以文会友。"
+    },
+    {
+        "id": 23,
+        "name": "山地剥",
+        "icon": "䷖",
+        "shortintro": "顺势而止",
+        "orginalcontent": "《剥》：不利有攸往。",
+        "vernacular": "剥卦象征剥落，顺势而止。",
+        "Duanyitianji": "剥卦，山附于地，剥落之象。",
+        "Originalexplain": "此卦象征顺势而止，以避其害。"
+    },
+    {
+        "id": 24,
+        "name": "地雷复",
+        "icon": "䷗",
+        "shortintro": "寓动于顺",
+        "orginalcontent": "《复》：亨，出入无疾，朋来无咎。",
+        "vernacular": "复卦象征复归，寓动于顺。",
+        "Duanyitianji": "复卦，地中有雷，复归之象。",
+        "Originalexplain": "此卦象征寓动于顺，以复其道。"
+    },
+    {
+        "id": 25,
+        "name": "天雷无妄",
+        "icon": "䷘",
+        "shortintro": "无妄而得",
+        "orginalcontent": "《无妄》：元亨利贞，其匪正有眚，不利有攸往。",
+        "vernacular": "无妄卦象征无妄，无妄而得。",
+        "Duanyitianji": "无妄卦，天下有雷，无妄之象。",
+        "Originalexplain": "此卦象征无妄而得，以正其行。"
+    },
+    {
+        "id": 26,
+        "name": "山天大畜",
+        "icon": "䷙",
+        "shortintro": "止而不止",
+        "orginalcontent": "《大畜》：利贞，不家食吉，利涉大川。",
+        "vernacular": "大畜卦象征大畜，止而不止。",
+        "Duanyitianji": "大畜卦，山下有天，大畜之象。",
+        "Originalexplain": "此卦象征止而不止，以畜其德。"
+    },
+    {
+        "id": 27,
+        "name": "山雷颐",
+        "icon": "䷚",
+        "shortintro": "纯正以养",
+        "orginalcontent": "《颐》：贞吉，观颐，自求口实。",
+        "vernacular": "颐卦象征颐养，纯正以养。",
+        "Duanyitianji": "颐卦，山下有雷，颐养之象。",
+        "Originalexplain": "此卦象征纯正以养，以养其人。"
+    },
+    {
+        "id": 28,
+        "name": "泽风大过",
+        "icon": "䷛",
+        "shortintro": "非常行动",
+        "orginalcontent": "《大过》：栋桡，利有攸往，亨。",
+        "vernacular": "大过卦象征大过，非常行动。",
+        "Duanyitianji": "大过卦，泽下有风，大过之象。",
+        "Originalexplain": "此卦象征非常行动，以济其事。"
+    },
+    {
+        "id": 29,
+        "name": "坎为水",
+        "icon": "䷜",
+        "shortintro": "行险用险",
+        "orginalcontent": "《坎》：习坎，有孚，维心亨，行有尚。",
+        "vernacular": "坎卦象征坎险，行险用险。",
+        "Duanyitianji": "坎卦，水至险，行险之象。",
+        "Originalexplain": "此卦象征行险用险，以习其险。"
+    },
+    {
+        "id": 30,
+        "name": "离为火",
+        "icon": "䷝",
+        "shortintro": "附和依托",
+        "orginalcontent": "《离》：利贞，亨。",
+        "vernacular": "离卦象征依附，附和依托。",
+        "Duanyitianji": "离卦，火炎上，依附之象。",
+        "Originalexplain": "此卦象征附和依托，以离其身。"
+    },
+    {
+        "id": 31,
+        "name": "泽山咸",
+        "icon": "䷞",
+        "shortintro": "相互感应",
+        "orginalcontent": "《咸》：亨，利贞，取女吉。",
+        "vernacular": "咸卦象征感应，相互感应。",
+        "Duanyitianji": "咸卦，泽山相合，咸感之象。",
+        "Originalexplain": "此卦象征相互感应，以感其诚。"
+    },
+    {
+        "id": 32,
+        "name": "雷风恒",
+        "icon": "䷟",
+        "shortintro": "恒心有成",
+        "orginalcontent": "《恒》：亨，无咎，利贞，利有攸往。",
+        "vernacular": "恒卦象征恒久，恒心有成。",
+        "Duanyitianji": "恒卦，雷动风行，恒久之象。",
+        "Originalexplain": "此卦象征恒心有成，以恒其德。"
+    },
+    {
+        "id": 33,
+        "name": "天山遁",
+        "icon": "䷠",
+        "shortintro": "遁世救世",
+        "orginalcontent": "《遁》：亨，小利贞。",
+        "vernacular": "遁卦象征退遁，遁世救世。",
+        "Duanyitianji": "遁卦，天下有山，遁世之象。",
+        "Originalexplain": "此卦象征遁世救世，以避其难。"
+    },
+    {
+        "id": 34,
+        "name": "雷天大壮",
+        "icon": "䷡",
+        "shortintro": "壮勿妄动",
+        "orginalcontent": "《大壮》：利贞。",
+        "vernacular": "大壮卦象征大壮，壮勿妄动。",
+        "Duanyitianji": "大壮卦，雷在天上，大壮之象。",
+        "Originalexplain": "此卦象征壮勿妄动，以壮其志。"
+    },
+    {
+        "id": 35,
+        "name": "火地晋",
+        "icon": "䷢",
+        "shortintro": "求进发展",
+        "orginalcontent": "《晋》：康侯用锡马蕃庶，昼日三接。",
+        "vernacular": "晋卦象征晋进，求进发展。",
+        "Duanyitianji": "晋卦，地上有火，晋进之象。",
+        "Originalexplain": "此卦象征求进发展，以晋其位。"
+    },
+    {
+        "id": 36,
+        "name": "地火明夷",
+        "icon": "䷣",
+        "shortintro": "晦而转明",
+        "orginalcontent": "《明夷》：利艰贞。",
+        "vernacular": "明夷卦象征光明受损，晦而转明。",
+        "Duanyitianji": "明夷卦，地火相合，明夷之象。",
+        "Originalexplain": "此卦象征晦而转明，以待其时。"
+    },
+    {
+        "id": 37,
+        "name": "风火家人",
+        "icon": "䷤",
+        "shortintro": "诚威治业",
+        "orginalcontent": "《家人》：利女贞。",
+        "vernacular": "家人卦象征家庭，诚威治业。",
+        "Duanyitianji": "家人卦，风火相合，家人之象。",
+        "Originalexplain": "此卦象征诚威治业，以正其家。"
+    },
+    {
+        "id": 38,
+        "name": "火泽睽",
+        "icon": "䷥",
+        "shortintro": "异中求同",
+        "orginalcontent": "《睽》：小事吉。",
+        "vernacular": "睽卦象征睽违，异中求同。",
+        "Duanyitianji": "睽卦，火泽相违，睽违之象。",
+        "Originalexplain": "此卦象征异中求同，以睽其道。"
+    },
+    {
+        "id": 39,
+        "name": "水山蹇",
+        "icon": "䷦",
+        "shortintro": "险阻在前",
+        "orginalcontent": "《蹇》：利西南，不利东北，利见大人，贞吉。",
+        "vernacular": "蹇卦象征蹇滞，险阻在前。",
+        "Duanyitianji": "蹇卦，山上有水，蹇滞之象。",
+        "Originalexplain": "此卦象征险阻在前，以蹇其行。"
+    },
+    {
+        "id": 40,
+        "name": "雷水解",
+        "icon": "䷧",
+        "shortintro": "柔道致治",
+        "orginalcontent": "《解》：利西南，无所往，其来复吉，有攸往，夙吉。",
+        "vernacular": "解卦象征解脱，柔道致治。",
+        "Duanyitianji": "解卦，雷动水行，解难之象。",
+        "Originalexplain": "此卦象征柔道致治，以解其难。"
+    },
+    {
+        "id": 41,
+        "name": "山泽损",
+        "icon": "䷨",
+        "shortintro": "损益制衡",
+        "orginalcontent": "《损》：有孚，元吉，无咎，可贞，利有攸往，曷之用？二簋可用享。",
+        "vernacular": "损卦象征损益，损益制衡。",
+        "Duanyitianji": "损卦，山下有泽，损益之象。",
+        "Originalexplain": "此卦象征损益制衡，以损益人。"
+    },
+    {
+        "id": 42,
+        "name": "风雷益",
+        "icon": "䷩",
+        "shortintro": "损上益下",
+        "orginalcontent": "《益》：利有攸往，利涉大川。",
+        "vernacular": "益卦象征增益，损上益下。",
+        "Duanyitianji": "益卦，风雷相合，增益之象。",
+        "Originalexplain": "此卦象征损上益下，以益其民。"
+    },
+    {
+        "id": 43,
+        "name": "泽天夬",
+        "icon": "䷪",
+        "shortintro": "决而能和",
+        "orginalcontent": "《夬》：扬于王庭，孚号，有厉，告自邑，不利即戎，利有攸往。",
+        "vernacular": "夬卦象征决断，决而能和。",
+        "Duanyitianji": "夬卦，泽上天下，决断之象。",
+        "Originalexplain": "此卦象征决而能和，以夬其事。"
+    },
+    {
+        "id": 44,
+        "name": "天风姤",
+        "icon": "䷫",
+        "shortintro": "天下有风",
+        "orginalcontent": "《姤》：女壮，勿用取女。",
+        "vernacular": "姤卦象征遭遇，天下有风。",
+        "Duanyitianji": "姤卦，天下有风，相遇之象。",
+        "Originalexplain": "此卦象征天下有风，以姤其遇。"
+    },
+    {
+        "id": 45,
+        "name": "泽地萃",
+        "icon": "䷬",
+        "shortintro": "荟萃聚集",
+        "orginalcontent": "《萃》：亨，王假有庙，利见大人，亨，利贞。",
+        "vernacular": "萃卦象征聚集，荟萃聚集。",
+        "Duanyitianji": "萃卦，泽上地下，聚集之象。",
+        "Originalexplain": "此卦象征荟萃聚集，以萃其众。"
+    },
+    {
+        "id": 46,
+        "name": "地风升",
+        "icon": "䷭",
+        "shortintro": "柔顺谦虚",
+        "orginalcontent": "《升》：元亨，用见大人，勿恤，南征吉。",
+        "vernacular": "升卦象征上升，柔顺谦虚。",
+        "Duanyitianji": "升卦，地中生木，上升之象。",
+        "Originalexplain": "此卦象征柔顺谦虚，以升其位。"
+    },
+    {
+        "id": 47,
+        "name": "泽水困",
+        "icon": "䷮",
+        "shortintro": "困境求通",
+        "orginalcontent": "《困》：亨，贞，大人吉，无咎，有言不信。",
+        "vernacular": "困卦象征困境，困境求通。",
+        "Duanyitianji": "困卦，泽中无水，困穷之象。",
+        "Originalexplain": "此卦象征困境求通，以困其身。"
+    },
+    {
+        "id": 48,
+        "name": "水风井",
+        "icon": "䷯",
+        "shortintro": "求贤若渴",
+        "orginalcontent": "《井》：改邑不改井，无丧无得，往来井井。",
+        "vernacular": "井卦象征井养，求贤若渴。",
+        "Duanyitianji": "井卦，木上有水，井养之象。",
+        "Originalexplain": "此卦象征求贤若渴，以井其用。"
+    },
+    {
+        "id": 49,
+        "name": "泽火革",
+        "icon": "䷰",
+        "shortintro": "顺天应人",
+        "orginalcontent": "《革》：己日乃孚，元亨利贞，悔亡。",
+        "vernacular": "革卦象征变革，顺天应人。",
+        "Duanyitianji": "革卦，泽中有火，变革之象。",
+        "Originalexplain": "此卦象征顺天应人，以革其旧。"
+    },
+    {
+        "id": 50,
+        "name": "火风鼎",
+        "icon": "䷱",
+        "shortintro": "稳重图变",
+        "orginalcontent": "《鼎》：元吉，亨。",
+        "vernacular": "鼎卦象征鼎新，稳重图变。",
+        "Duanyitianji": "鼎卦，火下有风，鼎新之象。",
+        "Originalexplain": "此卦象征稳重图变，以鼎其新。"
+    },
+    {
+        "id": 51,
+        "name": "震为雷",
+        "icon": "䷲",
+        "shortintro": "临危不乱",
+        "orginalcontent": "《震》：亨，震来虩虩，笑言哑哑，震惊百里，不丧匕鬯。",
+        "vernacular": "震卦象征震动，临危不乱。",
+        "Duanyitianji": "震卦，雷震天下，震动之象。",
+        "Originalexplain": "此卦象征临危不乱，以震其威。"
+    },
+    {
+        "id": 52,
+        "name": "艮为山",
+        "icon": "䷳",
+        "shortintro": "动静适时",
+        "orginalcontent": "《艮》：艮其背，不获其身，行其庭，不见其人，无咎。",
+        "vernacular": "艮卦象征抑止，动静适时。",
+        "Duanyitianji": "艮卦，山上有山，抑止之象。",
+        "Originalexplain": "此卦象征动静适时，以艮其进。"
+    },
+    {
+        "id": 53,
+        "name": "风山渐",
+        "icon": "䷴",
+        "shortintro": "渐进蓄德",
+        "orginalcontent": "《渐》：女归吉，利贞。",
+        "vernacular": "渐卦象征渐进，渐进蓄德。",
+        "Duanyitianji": "渐卦，山上有木，渐进之象。",
+        "Originalexplain": "此卦象征渐进蓄德，以渐其成。"
+    },
+    {
+        "id": 54,
+        "name": "雷泽归妹",
+        "icon": "䷵",
+        "shortintro": "立家兴业",
+        "orginalcontent": "《归妹》：征凶，无攸利。",
+        "vernacular": "归妹卦象征嫁娶，立家兴业。",
+        "Duanyitianji": "归妹卦，泽上有雷，归妹之象。",
+        "Originalexplain": "此卦象征立家兴业，以归其妹。"
+    },
+    {
+        "id": 55,
+        "name": "雷火丰",
+        "icon": "䷶",
+        "shortintro": "日中则斜",
+        "orginalcontent": "《丰》：亨，王假之，勿忧，宜日中。",
+        "vernacular": "丰卦象征丰大，日中则斜。",
+        "Duanyitianji": "丰卦，雷电交作，丰大之象。",
+        "Originalexplain": "此卦象征日中则斜，以丰其光。"
+    },
+    {
+        "id": 56,
+        "name": "火山旅",
+        "icon": "䷷",
+        "shortintro": "依义顺时",
+        "orginalcontent": "《旅》：小亨，旅贞吉。",
+        "vernacular": "旅卦象征旅行，依义顺时。",
+        "Duanyitianji": "旅卦，山上有火，旅行之象。",
+        "Originalexplain": "此卦象征依义顺时，以旅其行。"
+    },
+    {
+        "id": 57,
+        "name": "巽为风",
+        "icon": "䷸",
+        "shortintro": "谦逊受益",
+        "orginalcontent": "《巽》：小亨，利攸往，利见大人。",
+        "vernacular": "巽卦象征巽顺，谦逊受益。",
+        "Duanyitianji": "巽卦，风行地上，巽顺之象。",
+        "Originalexplain": "此卦象征谦逊受益，以巽其行。"
+    },
+    {
+        "id": 58,
+        "name": "兑为泽",
+        "icon": "䷹",
+        "shortintro": "刚内柔外",
+        "orginalcontent": "《兑》：亨，利贞。",
+        "vernacular": "兑卦象征泽润，刚内柔外。",
+        "Duanyitianji": "兑卦，泽润万物，泽润之象。",
+        "Originalexplain": "此卦象征刚内柔外，以兑其悦。"
+    },
+    {
+        "id": 59,
+        "name": "风水涣",
+        "icon": "䷺",
+        "shortintro": "拯救涣散",
+        "orginalcontent": "《涣》：亨，王假有庙，利涉大川，利贞。",
+        "vernacular": "涣卦象征涣散，拯救涣散。",
+        "Duanyitianji": "涣卦，风行水上，涣散之象。",
+        "Originalexplain": "此卦象征拯救涣散，以涣其众。"
+    },
+    {
+        "id": 60,
+        "name": "水泽节",
+        "icon": "䷻",
+        "shortintro": "万物有节",
+        "orginalcontent": "《节》：亨，苦节，不可贞。",
+        "vernacular": "节卦象征节制，万物有节。",
+        "Duanyitianji": "节卦，泽上有水，节制之象。",
+        "Originalexplain": "此卦象征万物有节，以节其流。"
+        },
+        {
+        "id": 61,
+        "name": "风泽中孚",
+        "icon": "䷼",
+        "shortintro": "诚信立身",
+        "orginalcontent": "《中孚》：豚鱼吉，利涉大川，利贞。",
+        "vernacular": "中孚卦象征诚信，诚信立身。",
+        "Duanyitianji": "中孚卦，泽上有风，中孚之象。",
+        "Originalexplain": "此卦象征诚信立身，以孚其信。"
+        },
+        {
+        "id": 62,
+        "name": "雷山小过",
+        "icon": "䷽",
+        "shortintro": "行动有度",
+        "orginalcontent": "《小过》：亨，利贞，可小事，不可大事，飞鸟遗之音，不宜上宜下，大吉。",
+        "vernacular": "小过卦象征小过，行动有度。",
+        "Duanyitianji": "小过卦，山上有雷，小过之象。",
+        "Originalexplain": "此卦象征行动有度，以小过其行。"
+        },
+        {
+        "id": 63,
+        "name": "水火既济",
+        "icon": "䷾",
+        "shortintro": "盛极将衰",
+        "orginalcontent": "《既济》：亨，小利贞，初吉终乱。",
+        "vernacular": "既济卦象征成功，盛极将衰。",
+        "Duanyitianji": "既济卦，水下有火，既济之象。",
+        "Originalexplain": "此卦象征盛极将衰，以既济其事。"
+        },
+        {
+        "id": 64,
+        "name": "火水未济",
+        "icon": "䷿",
+        "shortintro": "事业未竟",
+        "orginalcontent": "《未济》：亨，小狐汔济，濡其尾，无攸利。",
+        "vernacular": "未济卦象征未完成，事业未竟。",
+        "Duanyitianji": "未济卦，火上有水，未济之象。",
+        "Originalexplain": "此卦象征事业未竟，以未济其业。"
+        }
 ]

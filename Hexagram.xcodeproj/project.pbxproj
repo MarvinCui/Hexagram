@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		15F32CB62CF2E49A0075E923 /* HexagramWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 15F32C932CF2E4980075E923 /* HexagramWatchApp Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15F32CCB2CF2E9EA0075E923 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F32CCA2CF2E9EA0075E923 /* WidgetKit.framework */; };
+		15F32CCD2CF2E9EA0075E923 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F32CCC2CF2E9EA0075E923 /* SwiftUI.framework */; };
+		15F32CDB2CF2E9EC0075E923 /* HexagramWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15F32CC82CF2E9EA0075E923 /* HexagramWidgetExtension.appex */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		150E760A2CF2B9530038A3C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +28,124 @@
 			remoteGlobalIDString = 150E75F72CF2B9520038A3C1;
 			remoteInfo = Hexagram;
 		};
+		15F32CA32CF2E4990075E923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150E75F02CF2B9510038A3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F32C922CF2E4980075E923;
+			remoteInfo = "HexagramWatchApp Watch App";
+		};
+		15F32CAD2CF2E4990075E923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150E75F02CF2B9510038A3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F32C922CF2E4980075E923;
+			remoteInfo = "HexagramWatchApp Watch App";
+		};
+		15F32CB42CF2E49A0075E923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150E75F02CF2B9510038A3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F32C922CF2E4980075E923;
+			remoteInfo = "HexagramWatchApp Watch App";
+		};
+		15F32CD92CF2E9EC0075E923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 150E75F02CF2B9510038A3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15F32CC72CF2E9EA0075E923;
+			remoteInfo = HexagramWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15F32CB72CF2E49A0075E923 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				15F32CB62CF2E49A0075E923 /* HexagramWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CE02CF2E9EC0075E923 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				15F32CDB2CF2E9EC0075E923 /* HexagramWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32D132CF3078F0075E923 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		150E75F82CF2B9520038A3C1 /* Hexagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		150E76092CF2B9530038A3C1 /* HexagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		150E76132CF2B9530038A3C1 /* HexagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F32C932CF2E4980075E923 /* HexagramWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexagramWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F32CA22CF2E4990075E923 /* HexagramWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HexagramWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F32CAC2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HexagramWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F32CC82CF2E9EA0075E923 /* HexagramWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HexagramWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		15F32CCA2CF2E9EA0075E923 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
+		15F32CCC2CF2E9EA0075E923 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		15F32CDC2CF2E9EC0075E923 /* Exceptions for "HexagramWidget" folder in "HexagramWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			platformFiltersByRelativePath = {
+				HexagramWidgetBundle.swift = (ios, macos, );
+			};
+			target = 15F32CC72CF2E9EA0075E923 /* HexagramWidgetExtension */;
+		};
+		15F32D1D2CF30C710075E923 /* Exceptions for "Hexagram" folder in "Hexagram" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 150E75F72CF2B9520038A3C1 /* Hexagram */;
+		};
+		15F32D222CF310920075E923 /* Exceptions for "HexagramWidget" folder in "Hexagram" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HexagramLiveActivity.swift,
+			);
+			target = 150E75F72CF2B9520038A3C1 /* Hexagram */;
+		};
+		15F32D282CF317950075E923 /* Exceptions for "Hexagram" folder in "HexagramWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HexagramActivityAttributes.swift,
+			);
+			target = 15F32CC72CF2E9EA0075E923 /* HexagramWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		150E75FA2CF2B9520038A3C1 /* Hexagram */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				15F32D1D2CF30C710075E923 /* Exceptions for "Hexagram" folder in "Hexagram" target */,
+				15F32D282CF317950075E923 /* Exceptions for "Hexagram" folder in "HexagramWidgetExtension" target */,
+			);
 			path = Hexagram;
 			sourceTree = "<group>";
 		};
@@ -43,6 +157,30 @@
 		150E76162CF2B9530038A3C1 /* HexagramUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HexagramUITests;
+			sourceTree = "<group>";
+		};
+		15F32C942CF2E4980075E923 /* HexagramWatchApp Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HexagramWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		15F32CA52CF2E4990075E923 /* HexagramWatchApp Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HexagramWatchApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+		15F32CAF2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HexagramWatchApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		15F32CCE2CF2E9EA0075E923 /* HexagramWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				15F32D222CF310920075E923 /* Exceptions for "HexagramWidget" folder in "Hexagram" target */,
+				15F32CDC2CF2E9EC0075E923 /* Exceptions for "HexagramWidget" folder in "HexagramWidgetExtension" target */,
+			);
+			path = HexagramWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +207,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15F32C902CF2E4980075E923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32C9F2CF2E4990075E923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CA92CF2E4990075E923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CC52CF2E9EA0075E923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F32CCD2CF2E9EA0075E923 /* SwiftUI.framework in Frameworks */,
+				15F32CCB2CF2E9EA0075E923 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +246,11 @@
 				150E75FA2CF2B9520038A3C1 /* Hexagram */,
 				150E760C2CF2B9530038A3C1 /* HexagramTests */,
 				150E76162CF2B9530038A3C1 /* HexagramUITests */,
+				15F32C942CF2E4980075E923 /* HexagramWatchApp Watch App */,
+				15F32CA52CF2E4990075E923 /* HexagramWatchApp Watch AppTests */,
+				15F32CAF2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests */,
+				15F32CCE2CF2E9EA0075E923 /* HexagramWidget */,
+				15F32CC92CF2E9EA0075E923 /* Frameworks */,
 				150E75F92CF2B9520038A3C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +261,21 @@
 				150E75F82CF2B9520038A3C1 /* Hexagram.app */,
 				150E76092CF2B9530038A3C1 /* HexagramTests.xctest */,
 				150E76132CF2B9530038A3C1 /* HexagramUITests.xctest */,
+				15F32C932CF2E4980075E923 /* HexagramWatchApp Watch App.app */,
+				15F32CA22CF2E4990075E923 /* HexagramWatchApp Watch AppTests.xctest */,
+				15F32CAC2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests.xctest */,
+				15F32CC82CF2E9EA0075E923 /* HexagramWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		15F32CC92CF2E9EA0075E923 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15F32CCA2CF2E9EA0075E923 /* WidgetKit.framework */,
+				15F32CCC2CF2E9EA0075E923 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +288,15 @@
 				150E75F42CF2B9520038A3C1 /* Sources */,
 				150E75F52CF2B9520038A3C1 /* Frameworks */,
 				150E75F62CF2B9520038A3C1 /* Resources */,
+				15F32CB72CF2E49A0075E923 /* Embed Watch Content */,
+				15F32CE02CF2E9EC0075E923 /* Embed Foundation Extensions */,
+				15F32D132CF3078F0075E923 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				15F32CB52CF2E49A0075E923 /* PBXTargetDependency */,
+				15F32CDA2CF2E9EC0075E923 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				150E75FA2CF2B9520038A3C1 /* Hexagram */,
@@ -163,6 +354,96 @@
 			productReference = 150E76132CF2B9530038A3C1 /* HexagramUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		15F32C922CF2E4980075E923 /* HexagramWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F32CBE2CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch App" */;
+			buildPhases = (
+				15F32C8F2CF2E4980075E923 /* Sources */,
+				15F32C902CF2E4980075E923 /* Frameworks */,
+				15F32C912CF2E4980075E923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				15F32C942CF2E4980075E923 /* HexagramWatchApp Watch App */,
+			);
+			name = "HexagramWatchApp Watch App";
+			packageProductDependencies = (
+			);
+			productName = "HexagramWatchApp Watch App";
+			productReference = 15F32C932CF2E4980075E923 /* HexagramWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15F32CA12CF2E4990075E923 /* HexagramWatchApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F32CBF2CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch AppTests" */;
+			buildPhases = (
+				15F32C9E2CF2E4990075E923 /* Sources */,
+				15F32C9F2CF2E4990075E923 /* Frameworks */,
+				15F32CA02CF2E4990075E923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15F32CA42CF2E4990075E923 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				15F32CA52CF2E4990075E923 /* HexagramWatchApp Watch AppTests */,
+			);
+			name = "HexagramWatchApp Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "HexagramWatchApp Watch AppTests";
+			productReference = 15F32CA22CF2E4990075E923 /* HexagramWatchApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15F32CAB2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F32CC02CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch AppUITests" */;
+			buildPhases = (
+				15F32CA82CF2E4990075E923 /* Sources */,
+				15F32CA92CF2E4990075E923 /* Frameworks */,
+				15F32CAA2CF2E4990075E923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15F32CAE2CF2E4990075E923 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				15F32CAF2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests */,
+			);
+			name = "HexagramWatchApp Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "HexagramWatchApp Watch AppUITests";
+			productReference = 15F32CAC2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		15F32CC72CF2E9EA0075E923 /* HexagramWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15F32CDD2CF2E9EC0075E923 /* Build configuration list for PBXNativeTarget "HexagramWidgetExtension" */;
+			buildPhases = (
+				15F32CC42CF2E9EA0075E923 /* Sources */,
+				15F32CC52CF2E9EA0075E923 /* Frameworks */,
+				15F32CC62CF2E9EA0075E923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				15F32CCE2CF2E9EA0075E923 /* HexagramWidget */,
+			);
+			name = HexagramWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HexagramWidgetExtension;
+			productReference = 15F32CC82CF2E9EA0075E923 /* HexagramWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +465,20 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 150E75F72CF2B9520038A3C1;
 					};
+					15F32C922CF2E4980075E923 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					15F32CA12CF2E4990075E923 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 15F32C922CF2E4980075E923;
+					};
+					15F32CAB2CF2E4990075E923 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 15F32C922CF2E4980075E923;
+					};
+					15F32CC72CF2E9EA0075E923 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
 			buildConfigurationList = 150E75F32CF2B9510038A3C1 /* Build configuration list for PBXProject "Hexagram" */;
@@ -203,6 +498,10 @@
 				150E75F72CF2B9520038A3C1 /* Hexagram */,
 				150E76082CF2B9530038A3C1 /* HexagramTests */,
 				150E76122CF2B9530038A3C1 /* HexagramUITests */,
+				15F32C922CF2E4980075E923 /* HexagramWatchApp Watch App */,
+				15F32CA12CF2E4990075E923 /* HexagramWatchApp Watch AppTests */,
+				15F32CAB2CF2E4990075E923 /* HexagramWatchApp Watch AppUITests */,
+				15F32CC72CF2E9EA0075E923 /* HexagramWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +522,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		150E76112CF2B9530038A3C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32C912CF2E4980075E923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CA02CF2E4990075E923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CAA2CF2E4990075E923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CC62CF2E9EA0075E923 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +580,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15F32C8F2CF2E4980075E923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32C9E2CF2E4990075E923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CA82CF2E4990075E923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15F32CC42CF2E9EA0075E923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +620,31 @@
 			isa = PBXTargetDependency;
 			target = 150E75F72CF2B9520038A3C1 /* Hexagram */;
 			targetProxy = 150E76142CF2B9530038A3C1 /* PBXContainerItemProxy */;
+		};
+		15F32CA42CF2E4990075E923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15F32C922CF2E4980075E923 /* HexagramWatchApp Watch App */;
+			targetProxy = 15F32CA32CF2E4990075E923 /* PBXContainerItemProxy */;
+		};
+		15F32CAE2CF2E4990075E923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15F32C922CF2E4980075E923 /* HexagramWatchApp Watch App */;
+			targetProxy = 15F32CAD2CF2E4990075E923 /* PBXContainerItemProxy */;
+		};
+		15F32CB52CF2E49A0075E923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 15F32C922CF2E4980075E923 /* HexagramWatchApp Watch App */;
+			targetProxy = 15F32CB42CF2E49A0075E923 /* PBXContainerItemProxy */;
+		};
+		15F32CDA2CF2E9EC0075E923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				macos,
+			);
+			target = 15F32CC72CF2E9EA0075E923 /* HexagramWidgetExtension */;
+			targetProxy = 15F32CD92CF2E9EC0075E923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +776,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hexagram/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "六十四卦速查";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -409,16 +793,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.1;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -435,6 +821,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hexagram/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "六十四卦速查";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -448,16 +838,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.1;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -551,6 +943,231 @@
 			};
 			name = Release;
 		};
+		15F32CB82CF2E49A0075E923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HexagramWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HexagramWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = MarvinsLab.Hexagram;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Debug;
+		};
+		15F32CB92CF2E49A0075E923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HexagramWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HexagramWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = MarvinsLab.Hexagram;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Release;
+		};
+		15F32CBA2CF2E49A0075E923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MarvinsLab.HexagramWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexagramWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HexagramWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		15F32CBB2CF2E49A0075E923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MarvinsLab.HexagramWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexagramWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HexagramWatchApp Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		15F32CBC2CF2E49A0075E923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MarvinsLab.HexagramWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HexagramWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		15F32CBD2CF2E49A0075E923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MarvinsLab.HexagramWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HexagramWatchApp Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		15F32CDE2CF2E9EC0075E923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HexagramWidget/HexagramWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Hexagram/HexagramData.json;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HexagramWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HexagramWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram.HexagramWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		15F32CDF2CF2E9EC0075E923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HexagramWidget/HexagramWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Hexagram/HexagramData.json;
+				DEVELOPMENT_TEAM = DV7YAZKA2B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HexagramWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HexagramWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarvinsLab.Hexagram.HexagramWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,6 +1203,42 @@
 			buildConfigurations = (
 				150E76242CF2B9530038A3C1 /* Debug */,
 				150E76252CF2B9530038A3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F32CBE2CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F32CB82CF2E49A0075E923 /* Debug */,
+				15F32CB92CF2E49A0075E923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F32CBF2CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F32CBA2CF2E49A0075E923 /* Debug */,
+				15F32CBB2CF2E49A0075E923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F32CC02CF2E49A0075E923 /* Build configuration list for PBXNativeTarget "HexagramWatchApp Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F32CBC2CF2E49A0075E923 /* Debug */,
+				15F32CBD2CF2E49A0075E923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15F32CDD2CF2E9EC0075E923 /* Build configuration list for PBXNativeTarget "HexagramWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F32CDE2CF2E9EC0075E923 /* Debug */,
+				15F32CDF2CF2E9EC0075E923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

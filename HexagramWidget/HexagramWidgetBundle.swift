@@ -7,10 +7,13 @@
 
 import WidgetKit
 import SwiftUI
+import ActivityKit
+import Foundation
 
 @main
 struct HexagramWidgetBundle: WidgetBundle {
     var body: some Widget {
-        HexagramWidget()
+        HexagramWidget() // 注册静态小组件
+        HexagramLiveActivity() // 注册动态岛活动（如果存在）
     }
 }

@@ -11,6 +11,7 @@ import ActivityKit
 import Foundation
 
 
+// 定义 Live Activity 小组件
 struct HexagramLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: HexagramActivityAttributes.self) { context in
