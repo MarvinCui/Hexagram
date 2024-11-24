@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "乾卦",
+        "icon": "䷀",
+        "shortintro": "刚健中正",
+        "orginalcontent": "《乾》：元亨利贞。",
+        "vernacular": "乾卦象征天，天行健，君子以自强不息。",
+        "Duanyitianji": "乾为天，纯阳之象。",
+        "Originalexplain": "此卦象征刚健中正，适合积极进取。"
+    },
+    {
+        "id": 2,
+        "name": "坤卦",
+        "icon" : "䷁",
+        "shortintro": "厚德载物",
+        "orginalcontent": "《坤》：元亨利牝马之贞。",
+        "vernacular": "坤卦象征地，地势坤，君子以厚德载物。",
+        "Duanyitianji": "坤为地，纯阴之象。",
+        "Originalexplain": "此卦象征厚德载物，顺势而为。"
+    }
+]
