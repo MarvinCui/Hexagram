@@ -9,7 +9,9 @@
 
 import SwiftUI
 import Foundation
+#if canImport(ActivityKit) && (os(iOS) || os(macOS) && targetEnvironment(macCatalyst))
 import ActivityKit
+#endif
 
 // 数据模型
 struct Hexagram: Identifiable, Codable {
@@ -38,6 +40,7 @@ struct ContentView: View {
     @State private var hexagrams: [Hexagram] = []
     @State private var selectedHexagramID: UUID?
     @State private var searchText: String = ""
+    @State private var showAboutPage: Bool = false
 
     // 从 JSON 文件加载数据
     func loadHexagrams() {
@@ -94,18 +97,29 @@ struct ContentView: View {
                         }
                         // 随机选择一个卦象
                         if let randomHexagram = hexagrams.randomElement() {
-                            // 更新选中的卦象 ID，以便界面同步显示
                             selectedHexagramID = randomHexagram.id
-                            // 调用 triggerDynamicIsland 函数
+                            #if canImport(ActivityKit) && (os(iOS) || os(macOS) && targetEnvironment(macCatalyst))
                             triggerDynamicIsland(hexagram: randomHexagram)
+                            #endif
                         } else {
                             print("随机选择卦象失败")
                         }
                     }) {
                         Image(systemName: "dice")
                     }
+                    .contextMenu {
+                        Button(action: {
+                            showAboutPage = true // 长按进入“关于”页面
+                        }) {
+                            Label("关于", systemImage: "info.circle")
+                        }
+                    }
                 }
             }
+            .navigationDestination(isPresented: $showAboutPage) {
+                AboutView()
+            }
+            
             .navigationTitle("六十四卦速查")
             .onAppear {
                 loadHexagrams()
@@ -190,6 +204,8 @@ struct SectionView: View {
     ContentView()
 }
 
+
+#if canImport(ActivityKit) && (os(iOS) || os(macOS) && targetEnvironment(macCatalyst))
 extension ContentView {
     func triggerDynamicIsland(hexagram: Hexagram) {
         let attributes = HexagramActivityAttributes(hexagramId: hexagram.id)
@@ -199,8 +215,12 @@ extension ContentView {
             shortintro: hexagram.shortintro
         )
         
-        // 定义活动内容，有效期为30秒
-        let activityContent = ActivityContent(state: initialState, staleDate: Date().addingTimeInterval(30))
+        // 定义活动内容，有效期为5分钟
+        let activityContent = ActivityContent(
+            state: initialState,
+            staleDate: Date().addingTimeInterval(30) // 30s后自动过期
+        )
+
         
         do {
             _ = try Activity<HexagramActivityAttributes>.request(attributes: attributes, content: activityContent)
@@ -208,5 +228,38 @@ extension ContentView {
         } catch {
             print("启动 Dynamic Island 失败: \(error)")
         }
+    }
+}
+#endif
+
+
+//关于页面
+struct AboutView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("关于 Hexagram")
+                .font(.largeTitle)
+                .bold()
+            
+            Text("开发者：Boran Cui")
+                .font(.title2)
+            
+            Text("邮箱：boran.cui@outlook.com")
+                .font(.title3)
+                .foregroundColor(.blue)
+            
+            Text("微信号：Marvin-Cui")
+                .font(.title3)
+                .foregroundColor(.blue)
+            
+            Text("感谢使用！🩷")
+                .font(.body)
+                .multilineTextAlignment(.center)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(UIColor.systemBackground))
+        .navigationTitle("关于")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

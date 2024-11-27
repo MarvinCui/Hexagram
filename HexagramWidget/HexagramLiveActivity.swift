@@ -5,9 +5,10 @@
 //  Created by Boran Cui on 2024/11/24.
 //
 
+#if canImport(ActivityKit) && (os(iOS) || os(macOS) && targetEnvironment(macCatalyst))
 import WidgetKit
-import SwiftUI
 import ActivityKit
+import SwiftUI
 import Foundation
 
 
@@ -50,3 +51,4 @@ struct HexagramLiveActivity: Widget {
         }
     }
 }
+#endif

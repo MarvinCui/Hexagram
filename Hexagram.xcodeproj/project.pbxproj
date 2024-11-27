@@ -481,7 +481,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 150E75F32CF2B9510038A3C1 /* Build configuration list for PBXProject "Hexagram Handbook" */;
+			buildConfigurationList = 150E75F32CF2B9510038A3C1 /* Build configuration list for PBXProject "Hexagram" */;
 			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1170,7 +1170,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		150E75F32CF2B9510038A3C1 /* Build configuration list for PBXProject "Hexagram Handbook" */ = {
+		150E75F32CF2B9510038A3C1 /* Build configuration list for PBXProject "Hexagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				150E761B2CF2B9530038A3C1 /* Debug */,

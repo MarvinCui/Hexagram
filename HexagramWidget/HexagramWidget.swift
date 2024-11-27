@@ -80,24 +80,21 @@ struct HexagramProvider: TimelineProvider {
 
 struct HexagramWidgetEntryView: View {
     @Environment(\.widgetFamily) var widgetFamily
+    @Environment(\.colorScheme) var colorScheme // 检测当前的颜色模式
     var entry: HexagramProvider.Entry
 
     var body: some View {
         ZStack {
             //  小组件背景
-            Color.white
-                .containerBackground(Color.white, for: .widget)
             
             if widgetFamily == .systemSmall {
                 // 小尺寸小组件
                 VStack(spacing: 8) {
                     Text(entry.hexagram.icon)
                         .font(.system(size: 40))
-                        .foregroundColor(Color("IconColor"))
                     Text(entry.hexagram.name)
                         .font(.headline)
                         .bold()
-                        .foregroundColor(Color("TitleColor"))
                     Text(entry.hexagram.shortintro)
                         .font(.subheadline)
                         .foregroundColor(.gray)
@@ -110,13 +107,11 @@ struct HexagramWidgetEntryView: View {
                 HStack(spacing: 16) {
                     Text(entry.hexagram.icon)
                         .font(.system(size: 60))
-                        .foregroundColor(Color("IconColor"))
 
                     VStack(alignment: .leading, spacing: 8) {
                         Text(entry.hexagram.name)
                             .font(.headline)
                             .bold()
-                            .foregroundColor(Color("TitleColor"))
 
                         Text(entry.hexagram.shortintro)
                             .font(.subheadline)
@@ -137,5 +132,6 @@ struct HexagramWidgetEntryView: View {
                 .padding()
             }
         }
+                .containerBackground(Color.clear, for: .widget)
     }
 }
